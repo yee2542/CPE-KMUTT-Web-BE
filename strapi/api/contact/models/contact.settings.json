@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "contact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "thai",
+        "eng"
+      ]
+    }
+  }
+}
