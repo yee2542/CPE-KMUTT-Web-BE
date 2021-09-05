@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 
 import CommonLayout from 'common/components/Layouts/CommonLayout';
+import { GetNewsQuery } from 'common/generated/generated-types';
 
 import BrowseNews from 'modules/news/components/BrowseNews';
 
@@ -21,7 +22,13 @@ const MOCK_NAVIGATE = [
   },
 ];
 
-const BrowseNewsPage: React.FC = () => {
+export type BrowseNewsPageProps = {
+  data?: GetNewsQuery;
+};
+
+// TODO: implement data api to compoenents
+// TODO: implement pagination
+const BrowseNewsPage: React.FC<BrowseNewsPageProps> = () => {
   return (
     <>
       <Head>

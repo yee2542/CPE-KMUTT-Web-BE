@@ -1,0 +1,9 @@
+query GetNews($offset: Int = 0, $limit: Int = 25) {
+  contents(start: $offset, limit: $limit, publicationState: LIVE) {
+    _id
+    header
+    canvas_preview {
+      previewUrl
+    }
+  }
+}

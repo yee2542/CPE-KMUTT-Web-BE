@@ -14,18 +14,8 @@ generates:
       exportFragmentSpreadSubTypes: true
       documentMode: graphQLTag
       withResultType: true
-  # src/common/generated/page.tsx:
-  #   config:
-  #     documentMode: external
-  #     importDocumentNodeExternallyFrom: 'src/common/generated/generated-types'
-  #     reactApolloVersion: 3
-  #     withHooks: true
-  #     apolloClientInstanceImport: 'src/common/services/client'
-  #   preset: import-types
-  #   presetConfig:
-  #     typesPath: 'src/common/generated/generated-types'
-  #   plugins:
-  #     - graphql-codegen-apollo-next-ssr
+      withHooks: false
+
 hooks:
   afterAllFileWrite:
     - prettier --write

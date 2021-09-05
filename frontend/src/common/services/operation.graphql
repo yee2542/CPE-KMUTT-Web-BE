@@ -1,29 +1,29 @@
 # JYST FOR EXAMPLE
-fragment canvasOpts on UploadFile {
-  size
-  formats
-  name
-  caption
-  width
-  height
-}
+# fragment canvasOpts on UploadFile {
+#   size
+#   formats
+#   name
+#   caption
+#   width
+#   height
+# }
 
-query GetContent {
-  contents {
-    id
-    title_pr
-    canvas_pr {
-      ...canvasOpts
-    }
-    main_content {
-      title
-      canvas {
-        ...canvasOpts
-      }
-      body
-    }
-    language
-    published_at
-    createdAt
-  }
-}
+# query GetContent {
+#   contents {
+#     id
+#     title_pr
+#     canvas_pr {
+#       ...canvasOpts
+#     }
+#     main_content {
+#       title
+#       canvas {
+#         ...canvasOpts
+#       }
+#       body
+#     }
+#     language
+#     published_at
+#     createdAt
+#   }
+# }

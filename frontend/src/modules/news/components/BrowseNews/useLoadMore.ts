@@ -15,7 +15,7 @@ export type useLoadMore = {
 const FIRST_N_OF_NEWS = 9;
 const LOADMORE_N_OF_NEWS = 3;
 
-export default (args: useLoadMoreArgs): useLoadMore => {
+const useLoadMore = (args: useLoadMoreArgs): useLoadMore => {
   const { initData } = args;
   const [newsData, setNewsData] = useState<cardConstantsProps[]>([]);
   const [cur, setCur] = useState<number>(FIRST_N_OF_NEWS);
@@ -44,3 +44,5 @@ export default (args: useLoadMoreArgs): useLoadMore => {
     },
   };
 };
+
+export default useLoadMore;

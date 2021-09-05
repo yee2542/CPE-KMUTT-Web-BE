@@ -12,12 +12,15 @@ import HttpStatusCode from './constants/httpStatusCode';
 
 // FIXME: not integrate with out react app
 //FIXME: missing env injection
-export const END_POINT =
-  process.env.APP_GRAPHQL_ENDPOINT || 'http://localhost:1337/graphql';
+export const END_POINT = process.env.APP_GRAPHQL_ENDPOINT || 'http://strapi:1337/graphql';
 
 const httpLink = createHttpLink({
   uri: END_POINT,
-  credentials: 'include',
+  // credentials: 'include',
+  headers: {
+    Authorization:
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWJmODJjZWNjZjhkMDBhNjkwMDFjMSIsImlhdCI6MTYzMDg1OTYzMiwiZXhwIjoxNjMzNDUxNjMyfQ.guLqsEKsewaGX0Y-_VJTta9Wqtas-iIB3ZJbtTCyPVE',
+  },
 });
 
 const logoutLink = onError(({ graphQLErrors, networkError }: ErrorResponse) => {

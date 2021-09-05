@@ -51,6 +51,20 @@
         "content-sections.grid-image"
       ],
       "required": true
+    },
+    "canvas_preview": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
