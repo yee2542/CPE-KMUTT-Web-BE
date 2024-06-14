@@ -37,6 +37,12 @@ run projecy via Docker in dev environment
 $ docker-compose -f docker-compose.dev.yml up --build
 ```
 
+or with monitoring
+
+```console
+$ docker-compose -f docker-compose.dev.yml -f docker-compose.monitoring.dev.yml up --build
+```
+
 ### Production deployment
 
 for production running, please prepare `.env.prod` and
@@ -85,7 +91,7 @@ how to build a new API and generate native code for frontend
 export const getServerSideProps: GetServerSideProps = async () => {
   const { data } = await client.query<GetHomeQuery>({
     query: GetHomeDocument,
-    variables: { locale: "th" },
+    variables: { locale: 'th' },
   });
   return {
     props: { data },

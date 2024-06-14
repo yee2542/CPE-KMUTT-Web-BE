@@ -1,4 +1,11 @@
-version: '3.4'
+version: '3.7'
+x-logging: &default-logging
+  driver: 'json-file'
+  options:
+    max-size: '1m'
+    max-file: '1'
+    tag: '{{.Name}}'
+
 services:
   backend:
     container_name: cpe-kmutt-backend
@@ -73,6 +80,7 @@ services:
       - '1337:1337'
     depends_on:
       - mongodb
+    logging: *default-logging
   mongodb:
     container_name: mongodb
     restart: on-failure

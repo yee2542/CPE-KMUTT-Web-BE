@@ -37,6 +37,9 @@
 /db
 /uploads
 
+# Monitoring
+/data
+
 #ENV
 .env*
 
